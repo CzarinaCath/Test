@@ -33,6 +33,7 @@
                      <li><a href="<?php echo base_url('users'); ?>">User Manager</a></li>
                   <?php endif; ?>
                      <li><a href="<?php echo base_url('user/settings'); ?>">Settings</a></li>
+                      <li><a href="<?php echo base_url('edit/edituser'); ?>">Manage Account</a></li>
                      <li role="separator" class="divider"></li>
                      <li><a href="<?php echo base_url('auth/signout'); ?>">Sign Out</a></li>
                   </ul>
