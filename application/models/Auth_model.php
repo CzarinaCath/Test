@@ -61,4 +61,21 @@ class Auth_model extends CI_Model {
 
 		return $result->num_rows() == 1 ? $result->row() : false;
 	}
+	
+	public function update_contact($id,$data){
+
+		$this->load->library('session');
+
+		$this->db->select('ID');
+		$this->db->from('contacts');
+		$this->db->where('ID', $id);
+		$this->db->update('contacts', $data);
+
+	    $this->load->view('tpl/full-page/header');
+        $this->load->view('tpl/full-page/navbar');
+		$this->load->view('auth/updated');
+		$this->load->view('tpl/full-page/footer');
+
+		}
+
 }
